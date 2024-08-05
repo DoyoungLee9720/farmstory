@@ -70,7 +70,7 @@ header div>nav>ul>li>a {
   display: block;
   width: 196px;
   height: 100%;
-  background-image: url("./image/head_menu_line.png");
+  background-image: url("./images/head_menu_line.png");
   background-repeat: no-repeat;
   background-position: -2px -7px;
   box-sizing: border-box;
@@ -84,19 +84,19 @@ header div>nav>ul>li>a {
 }
 
 .navInfo > img:hover {
-  content : url("./image/head_menu1_ov.png")
+  content : url("./images/head_menu1_ov.png")
 }
 .navShop > img:nth-child(1):hover{
-  content : url("./image/head_menu2_ov.png")
+  content : url("./images/head_menu2_ov.png")
 }
 .navFarm > img:hover {
-  content : url("./image/head_menu3_ov.png")
+  content : url("./images/head_menu3_ov.png")
 }
 .navEven > img:hover{
-  content : url("./image/head_menu4_ov.png")
+  content : url("./images/head_menu4_ov.png")
 }
 .navComm > img:hover {
-  content : url("./image/head_menu5_ov.png")
+  content : url("./images/head_menu5_ov.png")
 }
 
 .navShop > img:nth-child(2) {
