@@ -48,6 +48,7 @@ main{
     height: auto;
     margin: 60px auto;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 aside{
@@ -62,6 +63,7 @@ aside{
     height: 30px;
     margin: 10px;
     background-color: #e5e5e5;
+    border: 1px solid #ccc;
     border-radius: 90px;
     box-sizing: border-box;
     padding: 7px 21px;
@@ -83,6 +85,9 @@ li.adNav{
 li.subNav{
     margin: 10px;
     font-weight: 700;
+}
+li.subNav>a[href]:hover{
+    background-color: #ddd;
 }
 a.now{
     text-decoration: underline;
@@ -124,11 +129,11 @@ table{
     width: 784px;
     border-collapse: collapse;
     margin-bottom: 10px;
+    border-top: #333 solid 2px;
 }
 
 thead>tr>th{
     background-color: #fbfbfb;
-    border-top: #111 solid 1px;
 }
 td{
     border-bottom: dotted 1px #999;
