@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <style>
+        section>article:nth-child(2)>table{margin-bottom: 0;}
+        section>article:nth-child(2)>table img{
+            width: 60px;
+            height: 60px;
+        }
+        form>h3{
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            height: 50px;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        form>h3>a[href="./register.html"]{
+            display: flex;
+            width: 50px;
+            height: 30px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        form>h3>input{
+            width: 74px;
+            height: 30px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        section>article:nth-child(3)>p{
+            text-align: center;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+        p>b{font-weight: bold;}
+        td,th{
+            text-align: left;
+        }
+        tr:nth-of-type(8)>td:nth-child(2){
+            height: 166px;
+        }
+        tr:nth-of-type(8)>td:nth-child(2)>input{
+            padding-bottom: 4px;
+        }
+        tr:nth-of-type(8)>td:nth-child(2)> * {
+            margin-bottom: 4px;
+            box-sizing: border-box;
+            
+        }
+        td{
+            padding-left: 12px;
+        }
+        textarea{
+            width: 157px;
+            height: 32px;
+            resize: none;
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div>
+                <a href="../index.html"><i class="logo"></i></a>
+                <p><a href="../../index.html">HOME</a> | <a href="../../index.html">로그아웃</a> | <a href="../../community/QnA.html">고객센터</a></p>
+            </div>
+        </header>
+        <main>
+            <aside class="adNav">
+                <h3>주요기능</h3>
+                <ul class="adNav">
+                    <li class="adNav">
+                        상품관리
+                        <ul>
+                            <li class="subNav">└ <a href="./list.html">상품목록</a></li>
+                            <li class="subNav">└ <a href="./register.html"class="now">상품등록</a></li>
+                        </ul>
+                    </li>
+                    <li class="adNav">
+                        주문관리
+                        <ul>
+                            <li class="subNav">└ <a href="../order/list.html">주문목록</a></li>
+                        </ul>
+                    </li>
+                    <li class="adNav">
+                        회원관리
+                        <ul>
+                            <li class="subNav">└ <a href="../user/list.html">회원목록</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <section>
+                <h3>상품목록</h3>
+                <article>
+                    <form action="#">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>상품명</td>
+                                    <td><input type="text" name="prodName"></td>
+                                </tr>
+                                <tr>
+                                    <td>종류</td>
+                                    <td><select>
+                                            <option>종류</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td>가격</td>
+                                    <td><input type="number" name="prodPrice"></td>
+                                </tr>
+                                <tr>
+                                    <td>포인트</td>
+                                    <td><input type="number" name="point">&nbsp;포인트는 가격의 1%</td>
+                                </tr>
+                                <tr>
+                                    <td>할인</td>
+                                    <td>
+                                        <select name="discount">
+                                            <option>없음</option>
+                                            <option selected>5%</option>
+                                            <option>10%</option>
+                                            <option>15%</option>
+                                            <option>20%</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>배송비</td>
+                                    <td>
+                                        <label><input type="radio" name="fee" value="2000" checked> 2,000원</label>&nbsp;
+                                        <label><input type="radio" name="fee" value="3000"> 3,000원</label>&nbsp;
+                                        <label><input type="radio" name="fee" value="5000"> 5,000원</label>&nbsp;
+                                        <label><input type="radio" name="fee" value="0"> 무료</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>재고</td>
+                                    <td><input type="number" name="stock"></td>
+                                </tr>
+                                <tr>
+                                    <td>상품이미지</td>
+                                    <td>
+                                        <p>상품목록 이미지(약 120 x 120)</p>
+                                        <input type="file" name="listImg">
+                                        <p>기본정보 이미지(약 240 x 240)</p>
+                                        <input type="file" name="infoImg">
+                                        <p>상품설명 이미지(약 750 x auto)</p>
+                                        <input type="file" name="detailImg">
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>기타</td>
+                                    <td><textarea name="etc"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>
+                            <a href="./register.html">취소</a> &nbsp;
+                            <input type="submit" value="상품등록"></input>
+                        </h3>
+                    </form>
+                </article>
+            </section>
+        </main>
+    </div>
+        <footer>
+            <p>FARMSTORY ADMINISTRATOR Version 1.0.1</p>
+            <p class="copy">Copyright&copy; 김철학(개발에반하다.) All rights reserved.</p>
+        </footer>
+</body>
+</html>
