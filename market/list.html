@@ -5,14 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../farmstory.css">
+  <script src="../js/includeHTML.js"></script>
   <title>장보기</title>
   <style>
+    
     main {
       height: auto;
       width: 980px;
       margin: 0 auto;
     }
-
+    strong {
+      font-weight:bold;
+    }
+    del{
+      color :#777;
+      font-size: 9px;
+    }
     .titleEvent {
       width: 980px;
       height: 184px;
@@ -102,57 +110,52 @@
       width: 100%;
       border-collapse: collapse;
       background-color: #fff;
+      text-align: center;
     }
-
-    table,
-    th,
-    td {
-      border: 1px solid #ccc;
+    thead{
+      padding : 10px;
+      background-color: #EEE;
+      border-top: 1px solid #111;
     }
-
+    tbody tr:last-child{
+      border-bottom: 1px solid #111;
+    }
+    tr{
+      border-bottom: 1px solid #EEEEEE;
+    }
+    
+    tr td:nth-child(2){
+      color: #777;
+    }
+    tr td:nth-child(3){
+      text-align: left;
+    }
+    tr td:nth-child(5){
+      font-size: 9px;
+    }
+    
     th,
     td {
       padding: 10px;
       text-align: center;
     }
-
-    th {
-      background-color: #eee;
+    td del:nth-child(3){
+      font-size: 12px;
     }
+    .listnumber{
+
+      text-align: center;
+    }
+    .listnumber :hover{
+      opacity: 0.9;
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
 <body>
-  <header id="header">
-    <div>
-      <article class="top">
-        <img src="../images/head_top_line.png" alt="">
-        <p>
-          <a href="#">HOME |</a>
-          <a href="#">로그인 |</a>
-          <a href="#">회원가입 |</a>
-          <a href="#">관리자 |</a>
-          <a href="#">고객센터</a>
-        </p>
-        <a href="#" class="headerLogo"><img src="../images/logo.png" alt="팜스토리 로고"></a>
-        <a href="#" class="headerTxt"><img src="../images/head_txt_img.png" alt="3만원이상 무료배송"></a>
-      </article>
-    </div>
-
-    <div>
-      <nav>
-        <ul class="nav">
-          <li><a href="#" class="navInfo"><img src="../images/head_menu1.png" alt="headerMenu1"></a></li>
-          <li><a href="#" class="navShop"><img src="../images/head_menu2.png" alt="headerMenu2"><img
-                src="../images/head_menu_badge.png" alt="" class="sale"></a></li>
-          <li><a href="#" class="navFarm"><img src="../images/head_menu3.png" alt="headerMenu3"></a></li>
-          <li><a href="#" class="navEven"><img src="../images/head_menu4.png" alt="headerMenu4"></a></li>
-          <li><a href="#" class="navComm"><img src="../images/head_menu5.png" alt="headerMenu5"></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+  <header include-html="../TMP/header.html" id="header"></header>
   <main>
     <div class="titleEvent"><img src="../images/sub_top_tit2.png" alt=""></div>
     <section class="mainSection">
@@ -164,8 +167,6 @@
       </aside>
       <div class="container">
         <section>
-
-
           <article class="mainArticle">
             <nav class="articleNav">
               <img src="../images/sub_nav_tit_cate2_tit1.png" alt="event">
@@ -193,7 +194,8 @@
                   <td>400P</td>
                   <td>
                     <strong>3,600원</strong>
-                    <del>4,000원</del>
+                    <del>4,000<br></del>
+                    <del>원</del>
                   </td>
                 </tr>
                 <tr>
@@ -204,7 +206,8 @@
                   <td>400P</td>
                   <td>
                     <strong>3,600원</strong>
-                    <del>4,000원</del>
+                    <del>4,000<br></del>
+                    <del>원</del>
                   </td>
                 </tr>
                 <tr>
@@ -215,7 +218,8 @@
                   <td>400P</td>
                   <td>
                     <strong>3,600원</strong>
-                    <del>4,000원</del>
+                    <del>4,000<br></del>
+                    <del>원</del>
                   </td>
                 </tr>
                 <tr>
@@ -226,7 +230,8 @@
                   <td>400P</td>
                   <td>
                     <strong>3,600원</strong>
-                    <del>4,000원</del>
+                    <del>4,000<br></del>
+                    <del>원</del>
                   </td>
                 </tr>
                 <tr>
@@ -237,36 +242,27 @@
                   <td>400P</td>
                   <td>
                     <strong>3,600원</strong>
-                    <del>4,000원</del>
+                    <del>4,000<br></del>
+                    <del>원</del>
                   </td>
                 </tr>
               </tbody>
             </table>
+             <p class="listnumber"> <a href="#">< [1] [2] [3] [4] [5] ></a></p>
+            
           </article>
+          
         </section>
+        
       </div>
+      
     </section>
+    
   </main>
   
-  <footer>
-    <div>
-      <img src="../images/footer_top_line.png" alt="">
-      <article>
-        <a href="#"><img src="../images/footer_logo.png" alt="footerlogo"></a>
-        <p class="footerinfo">
-          (주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-부산진구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호<br>
-          등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동<br>
-          대표 : 김철학 / 이메일 : chhak0503@gmail.com / 전화 : 01) 234-5678 / 부산광역시 부산진구 부전동 123
-        </p>
-        <p class="copyright">
-          copyrightⓒ 김철학(개발에반하다.) All rights reserved.
-        </p>
-        <p class="pageVer">
-          farmstory ver1.0.1
-        </p>
-      </article>
-    </div>
-  </footer>
+  <footer include-html="../TMP/footer.html"></footer>
 </body>
-
+<script>
+  includeHTML();
+</script>
 </html>
