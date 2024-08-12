@@ -46,15 +46,11 @@
         p>b{font-weight: bold;}
 
     </style>
+    <script src="../../js/includeHTML.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <header>
-            <div>
-                <a href="../index.html"><i class="logo"></i></a>
-                <p><a href="../../index.html">HOME</a> | <a href="../../index.html">로그아웃</a> | <a href="../../community/QnA.html">고객센터</a></p>
-            </div>
-        </header>
+        <header include-html="../header.html" id="header"></header>
         <main>
             <aside class="adNav">
                 <h3>주요기능</h3>
@@ -129,11 +125,9 @@
             </section>
         </main>
     </div>
-        <footer>
-            <p>FARMSTORY ADMINISTRATOR Version 1.0.1</p>
-            <p class="copy">Copyright&copy; 김철학(개발에반하다.) All rights reserved.</p>
-        </footer>
+    <footer include-html="../footer.html" id="footer"></footer>
 </body>
+<script>includeHTML();</script>
 </html>
 
 
