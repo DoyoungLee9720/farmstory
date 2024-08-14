@@ -67,36 +67,13 @@
             margin-bottom: 16px;
         }
     </style>
-    <script src="../../js/includeHTML.js"></script>
+    <script src="/farmstory/js/includeHTML.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <header include-html="../header.html" id="header"></header>
+        <header include-html="/farmstory/admin/css/header.html" id="header"></header>
         <main>
-            <aside class="adNav">
-                <h3>주요기능</h3>
-                <ul class="adNav">
-                    <li class="adNav">
-                        상품관리
-                        <ul>
-                            <li class="subNav">└ <a href="./list.html">상품목록</a></li>
-                            <li class="subNav">└ <a href="./register.html"class="now">상품등록</a></li>
-                        </ul>
-                    </li>
-                    <li class="adNav">
-                        주문관리
-                        <ul>
-                            <li class="subNav">└ <a href="../order/list.html">주문목록</a></li>
-                        </ul>
-                    </li>
-                    <li class="adNav">
-                        회원관리
-                        <ul>
-                            <li class="subNav">└ <a href="../user/list.html">회원목록</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
+            <aside class="adNav" include-html="/farmstory/admin/css/aside.html" id="aside"></aside>
             <section>
                 <h3>상품등록</h3>
                 <article>
@@ -173,7 +150,14 @@
             </section>
         </main>
     </div>
-    <footer include-html="../footer.html" id="footer"></footer>
+    <footer include-html="/farmstory/admin/css/footer.html" id="footer"></footer>
 </body>
-<script>includeHTML();</script>
+<script>
+    includeHTML(function() {
+        const now = document.querySelector('a#prodreg[href]');
+        if (now) {
+            now.classList.add("now");
+        }
+    });
+</script>
 </html>

@@ -35,40 +35,13 @@
         p>b{text-decoration: underline; font-weight: bold;}
 
     </style>
+    <script src="/farmstory/js/includeHTML.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <header>
-            <div>
-                <a href="../index.html"><i class="logo"></i></a>
-                <p><a href="../../index.html">HOME</a> | <a href="../../index.html">로그아웃</a> | <a href="../../community/QnA.html">고객센터</a></p>
-            </div>
-        </header>
+        <header include-html="/farmstory/admin/css/header.html" id="header"></header>
         <main>
-            <aside class="adNav">
-                <h3>주요기능</h3>
-                <ul class="adNav">
-                    <li class="adNav">
-                        상품관리
-                        <ul>
-                            <li class="subNav">└ <a href="../product/list.html">상품목록</a></li>
-                            <li class="subNav">└ <a href="../product/register.html">상품등록</a></li>
-                        </ul>
-                    </li>
-                    <li class="adNav">
-                        주문관리
-                        <ul>
-                            <li class="subNav">└ <a href="../order/list.html">주문목록</a></li>
-                        </ul>
-                    </li>
-                    <li class="adNav">
-                        회원관리
-                        <ul>
-                            <li class="subNav">└ <a href="./list.html" class="now">회원목록</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
+            <aside class="adNav" include-html="/farmstory/admin/css/aside.html" id="aside"></aside>
             <section>
                 <h3>회원목록</h3>
                 <article>
@@ -94,11 +67,13 @@
                                 <td>유신123</td>
                                 <td>yusin123@naver.com</td>
                                 <td>010-1234-1001</td>
-                                <td><select>
-                                    <option>1</option>
-                                    <option selected>2</option>
-                                    <option>3</option>
-                                </select></td>
+                                <td>
+                                    <select>
+                                        <option>1</option>
+                                        <option selected>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </td>
                                 <td>2023-01-01 13:06:14</td>
                                 <td><a href="#">[상세확인]</a></td>
                             </tr>
@@ -109,11 +84,13 @@
                                 <td>춘추123</td>
                                 <td>chunchu123@naver.com</td>
                                 <td>010-1234-1002</td>
-                                <td><select>
-                                    <option>1</option>
-                                    <option selected>2</option>
-                                    <option>3</option>
-                                </select></td>
+                                <td>
+                                    <select>
+                                        <option>1</option>
+                                        <option selected>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </td>
                                 <td>2023-01-02 13:06:14</td>
                                 <td><a href="#">[상세확인]</a></td>
                             </tr>
@@ -124,11 +101,13 @@
                                 <td>보고123</td>
                                 <td>bogo123@naver.com</td>
                                 <td>010-1234-1003</td>
-                                <td><select>
-                                    <option>1</option>
-                                    <option selected>2</option>
-                                    <option>3</option>
-                                </select></td>
+                                <td>
+                                    <select>
+                                        <option>1</option>
+                                        <option selected>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </td>
                                 <td>2023-01-03 13:06:14</td>
                                 <td><a href="#">[상세확인]</a></td>
                             </tr>
@@ -150,11 +129,16 @@
             </section>
         </main>
     </div>
-        <footer>
-            <p>FARMSTORY ADMINISTRATOR Version 1.0.1</p>
-            <p class="copy">Copyright&copy; 김철학(개발에반하다.) All rights reserved.</p>
-        </footer>
+    <footer include-html="/farmstory/admin/css/footer.html" id="footer"></footer>
 </body>
+<script>
+    includeHTML(function() {
+        const now = document.querySelector('a#userlist[href]');
+        if (now) {
+            now.classList.add("now");
+        }
+    });
+</script>
 </html>
 
 

@@ -89,7 +89,7 @@ li.subNav{
 li.subNav>a[href]:hover{
     background-color: #ddd;
 }
-a.now{
+.now{
     text-decoration: underline;
 }
 section{
