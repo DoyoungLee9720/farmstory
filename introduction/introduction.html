@@ -55,38 +55,24 @@
             background-position: right center;
             background-size: contain;
         }
-        .image {
-            position: relative;
-            margin: 15px 0;
+        .intro {
+            margin: 16px 16px;
         }
         .image > img {
             margin-left: 20px;
             margin-top: 10px;
-            
             
         }
         .sideimage {
             position: relative;
             width: 175px;
             height: 233px;
+            background-image: url("../images/sub_aside_bg_lnb.png");
         }
-        .sideimage  img {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: auto;
-            transition: opacity 0.3s ease;
-        }
-        
-        .sideimage .greet img:nth-child(1) { top: 26px; } 
-        .sideimage .greet img:nth-child(2) { top: 26px; opacity: 0; }
-        .sideimage .way img:nth-child(1) { top: 61px; }
-        .sideimage .way img:nth-child(2) { top: 61px; opacity: 0; }
 
-        .sideimage .greet img:hover:nth-child(1) { opacity: 0; }
-        .sideimage .greet img:hover:nth-child(2) { opacity: 1; }
-        .sideimage .way img:hover:nth-child(1) { opacity: 0; }
-        .sideimage .way img:hover:nth-child(2) { opacity: 1; }
+        .sideimage .greet img:nth-child(1) { position:absolute; top :26px; } 
+        .sideimage .way img:nth-child(1) { position:absolute; top: 61px; }
+        
 
         main section article {
             flex-grow: 1;
@@ -168,32 +154,24 @@
         nav > p:nth-of-type(3){position: absolute; right: 3px; bottom:5px;}
 
     </style>
+    <link rel="stylesheet" href="../css/farmstory.css">
+    <script src="../js/includeHTML.js"></script>
 </head>
 <body>
     <div id="wrapper"></div>
-    <header></header>
+    <header  include-html="../TMP/header.html" id="header" ></header>
     <main>
         <div class="background">
             <img src="../images/sub_top_tit1.png" alt="1">
         </div>
         <section>
             <aside>
-                <div class="image">
-                    <img src="../images/sub_aside_cate1_tit.png" alt="팜스토리 소개">
-                </div>
-                <div class="sideimage">
-                    <img src="../images/sub_aside_bg_lnb.png"  alt="사이드 배경">
-                    <a href="./introduction.html" class="greet">
-                    <img src="../images/sub_cate1_lnb1.png" alt="1">
-                    <img src="../images/sub_cate1_lnb1_ov.png" alt="2">
-                    </a>
-                    <a href="./direction.html" class="way">
-
-                        <img src="../images/sub_cate1_lnb2.png" alt="3">
-                        <img src="../images/sub_cate1_lnb2_ov.png" alt="4">
-                    </a>
+                    <img src="../images/sub_aside_cate1_tit.png" alt="팜스토리 소개" class="intro">
+                <ul class="sideimage">
                     
-                </div>
+                    <li><a href="./introduction.html" class="greet"><img src="../images/sub_cate1_lnb1_ov.png" alt="2"></a></li>
+                    </li><a href="./direction.html" class="way"><img src="../images/sub_cate1_lnb2.png" alt="3"></a></li>
+                </ul>
             </aside>
             <article>
                 <nav>
@@ -224,6 +202,9 @@
     
     </main>
 
-    <footer></footer>
+    <footer  include-html="../TMP/footer.html"></footer>
 </body>
+<script>
+    includeHTML();
+</script>
 </html>

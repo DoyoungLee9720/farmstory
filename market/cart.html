@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+            font: normal 12px '맑은고딕';
+        }
+        *
+        ul,ol {list-style: none;}
+        a {text-decoration: none; color: black;}
+        input,textarea {outline:none}*
+        #wrapper {
+        width: 100%;
+        height: 100%;
+    }
+        main {
+            width: 980px;
+            height: auto;
+            top: 326px;
+            left: 470px;
+            margin: 0 auto;
+        }
+        main .background {
+            position: relative;
+            width: 980px;
+            height: 184px;
+            background-image: url(../images/sub_top_bg.jpg);
+        }
+        main .background > img {
+            position: absolute;
+            top: 137px;
+            left: 10px;
+        }
+        main > section {
+            display: flex;
+            width: 980px;
+            height: 743px;
+        }
+        main section aside {
+            position: relative;
+            width: 176px;
+            height: 650px;
+            background-image: url('../images/sub_aside_bg_line.png'); /* 라인 이미지 경로 */
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: contain;
+        }
+        .intro {
+            margin: 16px 16px;
+        }
+        .image > img {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .sideimage {
+            position: relative;
+            width: 175px;
+            height: 233px;
+            background-image: url("../images/sub_aside_bg_lnb.png");
+        }
+        .sideimage .greet img:nth-child(1) { position:absolute; top :26px; }
+        .sideimage .way img:nth-child(1) { position:absolute; top: 61px; }
+        main section article {
+            flex-grow: 1;
+            height: 743px;
+            position: relative;
+        }
+        main section article > nav {
+            position: absolute;
+            width: 762px;
+            height: 72px;
+            left: 40px;
+            border-bottom: 1px solid #C2C2C2;
+        }
+        nav {
+            position: relative;
+        }
+        nav > img:nth-of-type(1) {
+            position: absolute;
+            top: 41px;
+        }
+        nav > img:nth-of-type(2) {
+            position: absolute;
+            bottom:10px;
+            right: 190px;
+        }
+        nav > p:nth-of-type(1){position: absolute; right: 135px; bottom:5px;}
+        nav > p:nth-of-type(2){position: absolute; right: 43px; bottom:5px;}
+        nav > p:nth-of-type(3){position: absolute; right: 3px; bottom:5px;}
+        .all {
+            width: 95.2px;
+            height: 14px;
+            position: absolute;
+            top: 113px;
+            left: 40px;
+            white-space: nowrap;
+        }
+        .cart {
+            width: 762px;
+            height: 332px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border-collapse: collapse; border-spacing: 0;
+            position: absolute;
+            top: 139px;
+            left: 40px;
+        }
+        .cart thead {
+            width: 762px;
+            height: 38px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart thead #tt {
+            width: 76.19px;
+            height: 38px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart thead th:nth-of-type(2) {
+            width: 80px;
+            height: 38px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart thead th:nth-of-type(4) {
+            width: 148.69px;
+            height: 38px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart tbody {
+            width: 762px;
+            height: 293px;
+            text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart > tbody > tr > td:nth-of-type(1) {
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart tbody #dd {
+            width: 76.19px;
+            height: 85px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart tbody th:nth-of-type(2) {
+            width: 80px;
+            height: 85px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .cart tbody th:nth-of-type(4) {
+            width: 148.69px;
+            height: 85px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        
+        
+        
+        .total {
+            width: 304.8px;
+            height: 262px;
+            position: relative;
+            top: 481px;
+            left: 497.2px;
+            border: 1px solid rgb(124, 124, 124);
+            box-sizing: border-box;
+        }
+        .downtable {
+            width: 290.8px;
+            height: 201px;
+            position: absolute;
+            top: 7px;
+            left: 6px;
+            border-top: 1px solid blue;
+            border-bottom: 1px solid blue;
+            box-sizing: border-box;
+            border-collapse: collapse;
+        }
+        .downtable > caption {
+            position: absolute;
+            width: 48.2px;
+            height: 14px;
+            top: 7px;
+            left: 121.39px;
+        }
+        .downtable tbody {
+            position: absolute;
+            width: 286.8px;
+            height: 166px;
+            top: 32px;
+            left: 2px;
+        }
+        .downtable > tbody > tr {
+            width: 286.8px;
+            height: 28px;
+           
+            
+            
+            
+        }
+        .downtable > tbody > tr > td:nth-child(1) {
+            width: 143.4px;
+            padding-left: 10px;
+            line-height: 12.48px;
+            font-size: 12px;
+            font-weight: 550;
+        }
+        .downtable > tbody > tr > td:nth-child(2) {
+            width: 143.4px;
+            padding-left: 80px;
+            line-height: 12.48px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+
+
+
+
+
+
+
+
+
+        .total input[type=button]{
+            width: 290.8px;
+            height: 37px;
+            position: absolute;
+            top: 218px;
+            left: 6px;
+            background-color: #960D1A;
+            color: white;
+            border: none;
+        }
+
+        
+        
+        
+        article > input[type=button]{
+            position: absolute;
+            width: 60px;
+            height: 29px;
+            top: 481px;
+            left: 40px;
+            background-color: #960D1A;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+        <link rel="stylesheet" href="../css/farmstory.css">
+        <script src="../js/includeHTML.js"></script>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <header   include-html="../TMP/header.html" id="header" ></header>
+    <main>
+        <div class="background">
+            <img src="../images/sub_top_tit1.png" alt="1">
+        </div>
+        <section>
+            <aside>
+                <img src="../images/sub_aside_cate1_tit.png" alt="팜스토리 소개" class="intro">
+            <ul class="sideimage">
+                <li><a href="./introduction.html" class="greet"><img src="../images/sub_cate1_lnb1_ov.png" alt="2"></a></li>
+                </li><a href="./direction.html" class="way"><img src="../images/sub_cate1_lnb2.png" alt="3"></a></li>
+            </ul>
+        </aside>
+            <article>
+                <nav>
+                    <img src="../images/sub_nav_tit_cate1_tit1.png" alt="인사말">
+                    <img src="../images/sub_page_nav_ico.gif" alt="나브 아이콘">
+                    <p>HOME ></p>
+                    <p>팜스토리 소개 ></p>
+                    <p>인사말</p>
+                </nav>
+                <div class="all"><a href="#">장바구니 전체(10)</a></div>
+                <table class="cart">
+                    <thead>
+                        <tr>
+                            <th id="tt"><input type="checkbox"></th>
+                            <th>이미지</th>
+                            <th id="tt">종류</th>
+                            <th>상품명</th>
+                            <th id="tt">수량</th>
+                            <th id="tt">할인</th>
+                            <th id="tt">포인트</th>
+                            <th id="tt">가격</th>
+                            <th id="tt">소계</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="9">장바구니에 상품이 없습니다.</td>
+                        </tr>
+                        <tr>
+                            <td id="dd"><input type="checkbox"></td>
+                            <td><a href="#"><img src="" alt=""></a></td>
+                            <td id="dd">과일</td>
+                            <td><a href="#">사과 500g</a></td>
+                            <td id="dd">1</td>
+                            <td id="dd">10%</td>
+                            <td id="dd">40p</td>
+                            <td id="dd">4,000원</td>
+                            <td id="dd">3,600원</td>
+                        </tr>
+                        <tr>
+                            <td id="dd"><input type="checkbox"></td>
+                            <td><a href="#"><img src="" alt=""></a></td>
+                            <td id="dd">과일</td>
+                            <td><a href="#">사과 500g</a></td>
+                            <td id="dd">1</td>
+                            <td id="dd">10%</td>
+                            <td id="dd">40p</td>
+                            <td id="dd">4,000원</td>
+                            <td id="dd">3,600원</td>
+                        </tr>
+                        <tr>
+                            <td id="dd"><input type="checkbox"></td>
+                            <td><a href="#"><img src="" alt=""></a></td>
+                            <td id="dd">과일</td>
+                            <td><a href="#">사과 500g</a></td>
+                            <td id="dd">1</td>
+                            <td id="dd">10%</td>
+                            <td id="dd">40p</td>
+                            <td id="dd">4,000원</td>
+                            <td id="dd">3,600원</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" value="선택삭제">
+                <div class="total">
+                    <table class="downtable">
+                        <caption>전체합계</caption>
+                        <tbody>
+                            <tr>
+                                <td>상품수</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>상품금액</td>
+                                <td>27,000원</td>
+                            </tr>
+                            <tr>
+                                <td>할인금액</td>
+                                <td>5,000원</td>
+                            </tr>
+                            <tr>
+                                <td>배송비</td>
+                                <td>5,000원</td>
+                            </tr>
+                            <tr>
+                                <td>포인트</td>
+                                <td>4,000원</td>
+                            </tr>
+                            <tr>
+                                <td>전체주문금액</td>
+                                <td>22,000원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="button" value="주문하기">
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer   include-html="../TMP/footer.html"></footer>
+</body>
+<script>
+    includeHTML();
+</script>
+</html>
