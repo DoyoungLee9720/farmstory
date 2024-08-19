@@ -75,31 +75,16 @@
             left: 0;
             width: 100%;
             height: auto;
-            transition: opacity 0.3s ease;
         }
         
         .sideimage .greet img:nth-child(1) { top: 26px; } 
-        .sideimage .greet img:nth-child(2) { top: 26px; opacity: 0; }
-        .sideimage .way img:nth-child(1) { top: 61px; }
-        .sideimage .way img:nth-child(2) { top: 61px; opacity: 0; }
-
-        .sideimage .greet img:hover:nth-child(1) { opacity: 0; }
-        .sideimage .greet img:hover:nth-child(2) { opacity: 1; }
-        .sideimage .way img:hover:nth-child(1) { opacity: 0; }
-        .sideimage .way img:hover:nth-child(2) { opacity: 1; }
+        .sideimage .way img:nth-child(1) { top: 61px;}
         
         main section article {
             flex-grow: 1;
             height: 650px;
             position: relative;
         
-        }
-        main section article > nav {
-            position: absolute;
-            width: 762px;
-            height: 72px;
-            left: 40px;
-            border-bottom: 1px solid #C2C2C2;
         }
         main section article > div {
             position: relative;
@@ -133,27 +118,33 @@
             
         }
 
-        nav {
-            position: relative;
-        }
-        nav > img:nth-of-type(1) {
+        .articleNav {
+            width: 762px;
+            height: 72px;
+            margin-left: 40px;
+            border-bottom: 1px solid #c2c2c2;
             position: absolute;
-            top: 41px;
         }
-        nav > img:nth-of-type(2) {
+        .articleNav > img {
             position: absolute;
-            bottom:10px;
-            right: 225px;
+            bottom: 5px;
         }
-        nav > p:nth-of-type(1){position: absolute; right: 173px; bottom:5px;}
-        nav > p:nth-of-type(2){position: absolute; right: 83px; bottom:5px;}
-        nav > p:nth-of-type(3){position: absolute; right: 3px; bottom:5px;}
+        .articleNav > p {
+            position: absolute;
+            bottom: 5px;
+            right: 0px;
+        }
+        .articleNav > p > strong {
+            color : rgb(124, 165, 64)
+        }
 
     </style>
+        <link rel="stylesheet" href="../css/farmstory.css">
+        <script src="../js/includeHTML.js"></script>
 </head>
 <body>
     <div id="wrapper"></div>
-    <header></header>
+    <header include-html="../TMP/header.html" id="header"></header>
     <main>
         <div class="background">
             <img src="../images/sub_top_tit1.png" alt="1">
@@ -167,23 +158,17 @@
                     <img src="../images/sub_aside_bg_lnb.png"  alt="사이드 배경">
                     <a href="./introduction.html" class="greet">
                     <img src="../images/sub_cate1_lnb1.png" alt="1">
-                    <img src="../images/sub_cate1_lnb1_ov.png" alt="2">
                     </a>
                     <a href="./direction.html" class="way">
-
-                        <img src="../images/sub_cate1_lnb2.png" alt="3">
                         <img src="../images/sub_cate1_lnb2_ov.png" alt="4">
                     </a>
                 </div>
             </aside>
             <article>
-                <nav>
-                    <img src="../images/sub_nav_tit_cate1_tit2.png" alt="찾아오시는 길">
-                    <img src="../images/sub_page_nav_ico.gif" alt="나브 아이콘">
-                    <p>HOME ></p>
-                    <p>팜스토리 소개 ></p>
-                    <p>찾아오시는 길</p>
-                </nav>
+                <nav class="articleNav">
+                    <img src="../images/sub_nav_tit_cate1_tit2.png" alt="event">
+                    <p><img src="../images/sub_page_nav_ico.gif" alt="navIcon"> HOME > 팜스토리소개 > <strong>찾아오시는 길</strong></p>
+                  </nav>
                 <div>
                     
                     <p>팜스토리</p>
@@ -199,7 +184,10 @@
     
     </main>
 
-    <footer></footer>
+    <footer include-html="../TMP/footer.html"></footer>
 </div>
 </body>
+<script>
+    includeHTML();
+</script>
 </html>
