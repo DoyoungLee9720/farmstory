@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
         main {
             height: auto;
             width: 980px;
@@ -101,7 +102,7 @@
             box-sizing: border-box;
 
         }
-        tbody img {
+        .market_ListSet img {
             width: 60px;  
             height: 60px; 
         }
@@ -180,29 +181,65 @@
             padding-left: 10px;
             padding-bottom: 10px;
         }
+        .orderInformation tr td:first-child{
+            background-color: #F7F7F7;
+        }
+        .orderInformation tr {
+            border-bottom: 1px solid #D7D7D7;
+        }
+        .orderInformation tr:first-child{
+            border-top: 1px solid #BE0808;
+        }
 
         .downtable {
             width: 305px;
-            height: 290px;
+            height: 209px;
+            border: 1px solid  #D7D7D7;
+            
+            box-sizing: border-box;
+            border-collapse: collapse;
+        }
+        .downtable thead {
+            padding: 10px;
+            background-color: #EEE;
+            border: none;
+            border-bottom:1px solid #111;
+        }
+
+        .downtable tr {
+            border: none; /* 다른 모든 경계선을 없앰 */
+            background-color: #fff;
             
         }
-        .orderInformation td, .downtable td {
+        .orderInformation td{
             text-align: left; /* 왼쪽 정렬 */
+            
+        }
+         .downtable td {
+            text-align: left; /* 왼쪽 정렬 */
+            padding: 8px;
         }
 
         .redbutton{
-            background-color: #960D1A; /* 배경색 */
-            color: white;              /* 글자색 */
-            border: none;              /* 테두리 제거 */
-            padding: 10px 20px;       /* 여백 추가 */
-            cursor: pointer;           /* 커서 모양 변경 */
-            width: 100%;               /* 버튼 너비를 100%로 설정 */
-            box-sizing: border-box;    /* 패딩과 테두리를 포함하여 너비 계산 */
+            background-color: #960D1A; 
+            color: white;              
+            border: none;             
+            padding: 10px 20px;       
+            cursor: pointer;           
+            width: 100%;               
+            box-sizing: border-box;    
         }
         .full-width {
             width: 100%;
-            box-sizing: border-box; /* 패딩과 보더를 포함하여 전체 너비를 계산합니다. */
+            box-sizing: border-box; 
         }
+        .total-amount{
+            color: red;
+        }
+        .orderInformation input[type="text"] {
+            margin-bottom: 3px; /* 입력 필드 간의 여백 추가 */
+        }
+
     </style>
     <link rel="stylesheet" href="../css/farmstory.css">
     <script src="../js/includeHTML.js"></script>
@@ -243,7 +280,7 @@
                                     <th>소계</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="market_ListSet">
                                 <tr>
                                     <td><img src="../images/market_item1.jpg" alt="사과 500g"></td>
                                     <td>과일</td>
@@ -299,7 +336,7 @@
                                 <tr>
                                     <td>배송주소</td>
                                     <td>
-                                        <input type="text" placeholder="주소 입력"><br>
+                                        <input type="text" placeholder="주소 입력"><img src="../images/btn_post_search.gif"><br>
                                         <input type="text" placeholder="기본주소 검색"  class="full-width"><br>
                                         <input type="text" placeholder="상세주소 검색"  class="full-width">
                                     </td>
@@ -318,9 +355,15 @@
                                     <td><textarea style="resize: none;"  class="full-width"></textarea></td>
                                 </tr>
                             </table>
-                    
+                            <div class="finalchecktable">
                             <table class="downtable">
-                                <caption>최종결제정보</caption>
+                                
+                                <thead>
+                                    
+                                    <tr>
+                                        <th colspan="2" class="table-title">최종결제정보</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                     <tr>
                                         <td>상품수</td>
@@ -339,18 +382,25 @@
                                         <td>5,000원</td>
                                     </tr>
                                     <tr>
-                                        <td>포인트</td>
-                                        <td>4,000원</td>
+                                        <td>포인트사용</td>
+                                        <td>2,000P</td>
                                     </tr>
                                     <tr>
-                                        <td>전체주문금액</td>
-                                        <td>22,000</td>
+                                        <td>포인트적립</td>
+                                        <td>400P</td>
                                     </tr>
+                                    <tr class="total-row">
+                                        <td>전체주문금액</td>
+                                        <td ><p class="total-amount">22,000원</p></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
                                     <tr>
                                         <td colspan="2"><input type="button" class="redbutton" value="결제하기"></td>
                                     </tr>
-                                </tbody>
+                                </tfoot>
                             </table>
+                        </div>
                         </div> <!-- 컨테이너 종료 -->
 
                 </section>
