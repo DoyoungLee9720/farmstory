@@ -11,7 +11,7 @@ a,a:visited{
     color: inherit;
 }
 header,footer{
-    background-image: url(/FARMSTORY/admin/images/admin_bg.jpg);
+    background-image: url(/admin/images/admin_bg.jpg);
     position: fixed;
     width: auto;
     left: 0;
@@ -31,7 +31,7 @@ header .logo{
     display: inline-block;
     width: 170px;
     height: 32px;
-    background-image: url(/FARMSTORY/admin/images/admin_logo.jpg);
+    background-image: url(/admin/images/admin_logo.jpg);
 }
 header p{
     width: auto;
